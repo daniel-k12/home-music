@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <title>HOME Music</title>
+</head>
+<body>
+    <span id="music-player">
+        <img id="album-cover" data-amplitude-song-info="cover_art_url">
+        	<span id="song-name" data-amplitude-song-info="name"></span>
+        	<span id="song-album" data-amplitude-song-info="album"></span>
+        	<span id="song-artist" data-amplitude-song-info="artist"></span>
+        	<div id="progress-container">
+            	<span class="amplitude-current-time"></span>
+            	<progress class="amplitude-song-played-progress"></progress>
+            	<span class="amplitude-duration-time"></span>
+        	</div>
+        	<div id="btn-controls">
+            	<span class="amplitude-prev"></span>
+            	<span class="amplitude-play-pause"></span>
+            	<span class="amplitude-next"></span>
+			</div>
+	</div>
+	
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@5.0.2/dist/amplitude.js"></script>
+    
+    <script>
+        Amplitude.init({
+		"songs": [
+			{
+				"name": "Above All",
+				"artist": "HOME",
+				"album": "Before The Night",
+				"url": "/songs/above all.mp3",
+				"cover_art_url": "/album covers/before the night.jpg"
+            },
+            {
+				"name": "Before The Night",
+				"artist": "HOME",
+				"album": "Before The Night",
+				"url": "/songs/before the night.mp3",
+				"cover_art_url": "/album covers/before the night.jpg"
+            },
+            {
+				"name": "Billiards",
+				"artist": "HOME",
+				"album": "Falling Into Place",
+				"url": "/songs/billiards.mp3",
+				"cover_art_url": "/album covers/falling into place.jpg"
+            },
+            {
+				"name": "Blackout",
+				"artist": "HOME",
+				"album": "Falling Into Place",
+				"url": "/songs/blackout.mp3",
+				"cover_art_url": "/album covers/falling into place.jpg"
+            },
+            {
+				"name": "Bright Lights In Silent Rooms",
+				"artist": "HOME",
+				"album": "Falling Into Place",
+				"url": "/songs/bright lights in silent rooms.mp3",
+				"cover_art_url": "/album covers/falling into place.jpg"
+            },
+            {
+				"name": "Burning",
+				"artist": "HOME",
+				"album": "Falling Into Place",
+				"url": "/songs/burning.mp3",
+				"cover_art_url": "/album covers/falling into place.jpg"
+            },
+            {
+				"name": "Climbing Out",
+				"artist": "HOME",
+				"album": "Falling Into Place",
+				"url": "/songs/climbing out.mp3",
+				"cover_art_url": "/album covers/falling into place.jpg"
+            },
+            {
+				"name": "Come Back Down",
+				"artist": "HOME",
+				"album": "Odyssey",
+				"url": "/songs/come back down.mp3",
+				"cover_art_url": "/album covers/odyssey.jpg"
+            },
+            {
+				"name": "Decay",
+				"artist": "HOME",
+				"album": "Odyssey",
+				"url": "/songs/decay.mp3",
+				"cover_art_url": "/album covers/odyssey.jpg"
+            },
+            {
+				"name": "Falling Into Place",
+				"artist": "HOME",
+				"album": "Falling Into Place",
+				"url": "/songs/falling into place.mp3",
+				"cover_art_url": "/album covers/falling into place.jpg"
+            },
+            {
+				"name": "Fata Morgana (Interlude)",
+				"artist": "HOME",
+				"album": "Falling Into Place",
+				"url": "/songs/fata morgana (interlude).mp3",
+				"cover_art_url": "/album covers/falling into place.jpg"
+            },
+            {
+				"name": "Flashlight",
+				"artist": "HOME",
+				"album": "Falling Into Place",
+				"url": "/songs/flashlight.mp3",
+				"cover_art_url": "/album covers/falling into place.jpg"
+            },
+            {
+				"name": "Half Moon",
+				"artist": "HOME",
+				"album": "Odyssey",
+				"url": "/songs/half moon.mp3",
+				"cover_art_url": "/album covers/odyssey.jpg"
+            },
+            {
+				"name": "Head First",
+				"artist": "HOME",
+				"album": "Falling Into Place",
+				"url": "/songs/head first.mp3",
+				"cover_art_url": "/album covers/falling into place.jpg"
+            },
+            {
+				"name": "Hold Your Breath",
+				"artist": "HOME",
+				"album": "Falling Into Place",
+				"url": "/songs/hold your breath.mp3",
+				"cover_art_url": "/album covers/falling into place.jpg"
+            },
+            {
+				"name": "I See You",
+				"artist": "HOME",
+				"album": "Falling Into Place",
+				"url": "/songs/i see you.mp3",
+				"cover_art_url": "/album covers/falling into place.jpg"
+            },
+            {
+				"name": "If I'm Wrong",
+				"artist": "HOME",
+				"album": "Before The Night",
+				"url": "/songs/if i'm wrong.mp3",
+				"cover_art_url": "/album covers/Before The Night.jpg"
+            },
+            {
+				"name": "Intro",
+				"artist": "HOME",
+				"album": "Odyssey",
+				"url": "/songs/intro.mp3",
+				"cover_art_url": "/album covers/odyssey.jpg"
+            },
+            {
+				"name": "Native",
+				"artist": "HOME",
+				"album": "Odyssey",
+				"url": "/songs/native.mp3",
+				"cover_art_url": "/album covers/odyssey.jpg"
+            },
+            {
+				"name": "New Machines",
+				"artist": "HOME",
+				"album": "Odyssey",
+				"url": "/songs/new machines.mp3",
+				"cover_art_url": "/album covers/odyssey.jpg"
+            },
+            {
+				"name": "Night Swim",
+				"artist": "HOME",
+				"album": "Falling Into Place",
+				"url": "/songs/night swim.mp3",
+				"cover_art_url": "/album covers/falling into place.jpg"
+            },
+            {
+				"name": "Nights (I Wish I Could Be There)",
+				"artist": "HOME",
+				"album": "Odyssey",
+				"url": "/songs/nights (i wish i could be there).mp3",
+				"cover_art_url": "/album covers/odyssey.jpg"
+            },
+            {
+				"name": "Nosebleed",
+				"artist": "HOME",
+				"album": "Before The Night",
+				"url": "/songs/nosebleed.mp3",
+				"cover_art_url": "/album covers/before the night.jpg"
+            },
+            {
+				"name": "Odyssey",
+				"artist": "HOME",
+				"album": "Odyssey",
+				"url": "/songs/odyssey.mp3",
+				"cover_art_url": "/album covers/odyssey.jpg"
+            },
+            {
+				"name": "On The Way Out",
+				"artist": "HOME",
+				"album": "Odyssey",
+				"url": "/songs/on the way out.mp3",
+				"cover_art_url": "/album covers/odyssey.jpg"
+            },
+            {
+				"name": "Oort Cloud",
+				"artist": "HOME",
+				"album": "Odyssey",
+				"url": "/songs/oort cloud.mp3",
+				"cover_art_url": "/album covers/odyssey.jpg"
+            },
+            {
+				"name": "Overflow",
+				"artist": "HOME",
+				"album": "Before The Night",
+				"url": "/songs/overflow.mp3",
+				"cover_art_url": "/album covers/before the night.jpg"
+            },
+            {
+				"name": "Puzzle",
+				"artist": "HOME",
+				"album": "Falling Into Place",
+				"url": "/songs/puzzle.mp3",
+				"cover_art_url": "/album covers/falling into place.jpg"
+            },
+            {
+				"name": "Pyxis",
+				"artist": "HOME",
+				"album": "Before The Night",
+				"url": "/songs/pyxis.mp3",
+				"cover_art_url": "/album covers/before the night.jpg"
+            },
+            {
+				"name": "Resonance",
+				"artist": "HOME",
+				"album": "Odyssey",
+				"url": "/songs/resonance.mp3",
+				"cover_art_url": "/album covers/odyssey.jpg"
+            },
+            {
+				"name": "Sleep",
+				"artist": "HOME",
+				"album": "Before The Night",
+				"url": "/songs/sleep.mp3",
+				"cover_art_url": "/album covers/before the night.jpg"
+            },
+            {
+				"name": "Sun",
+				"artist": "HOME",
+				"album": "Befoer The Night",
+				"url": "/songs/sun.mp3",
+				"cover_art_url": "/album covers/before the night.jpg"
+            },
+            {
+				"name": "Synchronize",
+				"artist": "HOME",
+				"album": "Before The Night",
+				"url": "/songs/synchronize.mp3",
+				"cover_art_url": "/album covers/before the night.jpg"
+            },
+            {
+				"name": "This Will Pass",
+				"artist": "HOME",
+				"album": "Falling Into Place",
+				"url": "/songs/this will pass.mp3",
+				"cover_art_url": "/album covers/falling into place.jpg"
+            },
+            {
+				"name": "Tides",
+				"artist": "HOME",
+				"album": "Odyssey",
+				"url": "/songs/tides.mp3",
+				"cover_art_url": "/album covers/odyssey.jpg"
+            },
+            {
+				"name": "Warmth",
+				"artist": "HOME",
+				"album": "Falling Into Place",
+				"url": "/songs/warmth.mp3",
+				"cover_art_url": "/album covers/falling into place.jpg"
+            },
+            {
+				"name": "We're Finally Landing",
+				"artist": "HOME",
+				"album": "Before The Night",
+				"url": "/songs/we're finally landing.mp3",
+				"cover_art_url": "/album covers/before the night.jpg"
+            },
+            {
+				"name": "Withoud A Sound",
+				"artist": "HOME",
+				"album": "Before The Night",
+				"url": "/songs/without a sound.mp3",
+				"cover_art_url": "/album covers/before the night.jpg"
+            }
+        ],
+    });
+    </script>
+
+    <script src="progress-click.js"></script>
+    <script src="volume-icon.js"></script>
+</body>
+</html>

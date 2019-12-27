@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    background-color: #212121; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#music-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    * {
+        margin: 8px;
+    }
+   
+    #song-name {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #song-artist {
+        color: #757575;
+    }
+    
+    #album-cover {
+        width: 300px;
+        height: 300px;
+    }
+
+    #progress-container {
+        display: flex;
+        align-items: center;
+
+        progress {
+            height: 8px;
+            width: 400px;
+            background-color: #757575;
+            border: none;
+            cursor: pointer;
+            
+            &::-webkit-progress-bar-value {
+                background: linear-gradient(90deg, rgba(216,27,96,1) 0%, rgba(248,187,208,1) 35%);
+                box-shadow: 0 0 8px #c51162;
+            }
+
+            &::-moz-progress-bar {
+                background: linear-gradient(90deg, rgba(216,27,96,1) 0%, rgba(248,187,208,1) 35%);
+                box-shadow: 0 0 8px #c51162;
+            }
+        }
+    }
+
+    #btn-controls {
+        display: flex;
+        align-items: center;
+
+        .amplitude-prev, .amplitude-play-pause, .amplitude-paused, .amplitude-playing, .amplitude-next {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-size: cover;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+                       
+            &:active {
+                background-color: #424242;
+                transition: all 0s ease-in-out;
+            }
+        }
+
+        .amplitude-prev {
+            background-image: url('/icons/prev.svg');
+        }
+
+        .amplitude-paused {
+            background-image: url('/icons/play.svg');
+        }
+        
+        .amplitude-playing {
+            background-image: url('/icons/pause.svg');
+        }
+    
+        .amplitude-next {
+            background-image: url('/icons/next.svg');
+        }
+    }
+}
+
